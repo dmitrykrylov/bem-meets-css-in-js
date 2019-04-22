@@ -1,0 +1,99 @@
+body {
+  font-size: 36px;
+  font-family: "Istok Web", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.step {
+  min-width: 760px;
+  min-height: 400px;
+}
+
+.substep {
+  opacity: 0;
+}
+
+.substep.substep-visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.centered {
+  text-align: center;
+}
+
+.bem-react {
+  font-size: 24px;
+}
+
+.element-proxy {
+  width: 1280px;
+  height: 711px;
+
+  &__image-wrapper {
+    position: absolute;
+    z-index: -1;
+  }
+  &__code-wrapper {
+    position: absolute;
+    top: 500px;
+    right: 50px;
+
+    pre {
+      border: 2px solid rgb(155, 155, 155);
+      text-align: center !important;
+      box-shadow: 1px 1px 12px rgb(223, 222, 222);
+    }
+  }
+}
+
+.import {
+  font-size: 26px;
+}
+
+.why {
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+.blackjack {
+  display: flex;
+  flex-direction: row;
+
+  &__bender {
+    margin-right: 20px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 14em;
+  }
+}
+
+.horsemen {
+  margin-top: 200px;
+}
+
+twitter-widget {
+  transform: scale(2, 2) !important;
+}
+
+.language-jsx {
+  .token.tag > .token.class-name {
+    color: #f92672;
+  }
+  .token.tag,
+  .token.constant,
+  .token.keyword + .token.function {
+    color: #f8f8f2 !important;
+  }
+  .token.string {
+    color: #e6db74 !important;
+  }
+}
