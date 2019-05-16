@@ -22,42 +22,36 @@
       <div id="bem-meets-react" class="step" data-x="4000" data-y="0">
         <img class="horsemen" src="images/horsemen.jpeg" />
       </div>
-      <div id="why-not-css-in-js" class="step" data-x="6000" data-y="0">
+      <div id="bem-react" class="step bem-react" data-x="6000" data-y="0">
+        <pre><code class="language-js">import { cn } from '@bem-react/classname';
+  
+  const cat = cn('Cat');
+  
+  cat(); // Cat
+  cat({ size: 'm' }); // Cat Cat_size_m
+  cat('Tail'); // Cat-Tail
+  cat('Tail', { length: 'small' }); // Cat-Tail Cat-Tail_length_small
+  
+  const dogPaw = cn('Dog', 'Paw');
+  
+  dogPaw(); // Dog-Paw
+  dogPaw({ color: 'black', exists: true });
+  // Dog-Paw Dog-Paw_color_black Dog-Paw_exists</code></pre>
+      </div>
+      <div id="why-not-css-in-js" class="step" data-x="8000" data-y="0">
         <h1>Почему не CSS-in-JS?</h1>
         <ul>
-          <li>Иногда нужны статические классы</li>
           <li>Runtime</li>
+          <li>Иногда нужны статические классы</li>
           <li>Вкус и цвет</li>
         </ul>
-      </div>
-      <div id="bem-react" class="step bem-react" data-x="8000" data-y="0">
-        <pre><code class="language-js">import { cn } from '@bem-react/classname';
-
-const cat = cn('Cat');
-
-cat(); // Cat
-cat({ size: 'm' }); // Cat Cat_size_m
-cat('Tail'); // Cat-Tail
-cat('Tail', { length: 'small' }); // Cat-Tail Cat-Tail_length_small
-
-const dogPaw = cn('Dog', 'Paw');
-
-dogPaw(); // Dog-Paw
-dogPaw({ color: 'black', exists: true });
-// Dog-Paw Dog-Paw_color_black Dog-Paw_exists</code></pre>
       </div>
       <div id="block" class="step" data-x="0" data-y="1000">
         <h1>Блок</h1>
         <pre><code class="language-html">&lt;div class="Block">&lt;/div></code></pre>
         <pre class="substep"><code class="language-jsx">&lt;Block/></code></pre>
       </div>
-      <div
-        id="non-div"
-        class="step"
-        data-x="0"
-        data-y="2000"
-        data-rotate-x="-40"
-      >
+      <div id="non-div" class="step" data-x="0" data-y="2000">
         <h1>А что если не div?</h1>
         <pre><code class="language-html">&lt;button class="Block">Yo!&lt;/div></code></pre>
         <pre
@@ -87,7 +81,7 @@ dogPaw({ color: 'black', exists: true });
       </div>
       <div id="mixes" class="step" data-x="6000" data-y="1000">
         <h1>Микс</h1>
-        <pre><code class="language-html">&lt;div as="Block__Element AnotherBlock" /></code></pre>
+        <pre><code class="language-html">&lt;div class="Block__Element AnotherBlock" /></code></pre>
         <pre
           class="substep"
         ><code class="language-jsx">&lt;Block.Element as={AnotherBlock} /></code></pre>
@@ -135,6 +129,11 @@ export default Card</code></pre>
       </div>
       <div id="typings" class="step" data-x="2000" data-y="3000">
         <h1>Туда бы тайпинги...</h1>
+        <img
+          class="typings__img substep"
+          src="images/typings.png"
+          alt="Typings"
+        />
       </div>
       <div
         id="why"
